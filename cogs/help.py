@@ -15,7 +15,7 @@ class Help(commands.Cog):
         embed.add_field(name="@Beth deactivate [deact, off]",
                         value="ログ無効化", inline=False)
         embed.add_field(name="サポートサーバー",
-                        value="[リンク](https://discord.gg/TNQVhAu9fk)",
+                        value="作者が受験中のため、しばらく更新をストップしています\nお困りの場合は直接`Huyu#2239`連絡してください",
                         inline=False)
         await ctx.send(embed=embed)
 

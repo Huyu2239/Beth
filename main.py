@@ -8,7 +8,7 @@ load_dotenv()
 
 class Beth(commands.Bot):
     def __init__(self, command_prefix, **options):
-        prefix = command_prefix  # commands.when_mentioned_or(command_prefix)
+        prefix = commands.when_mentioned_or(command_prefix)
         allowed_mentions = discord.AllowedMentions(everyone=False,
                                                    roles=False,
                                                    users=True)
@@ -18,7 +18,7 @@ class Beth(commands.Bot):
                          allowed_mentions=allowed_mentions,
                          **options)
         self.prefix = command_prefix
-        self.logch_id = 779990306434842646  # error-log
+        self.logch_id = 823868975782952990  # error-log
         self.remove_command('help')
 
     async def on_ready(self):
@@ -52,5 +52,5 @@ class Beth(commands.Bot):
 
 
 if __name__ == '__main__':
-    bot = Beth(command_prefix="t.", max_messages=9999)
+    bot = Beth(command_prefix="b.", max_messages=9999)
     bot.run(os.environ['TOKEN'])
